@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeGuard Community - Report Incident</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>SafeGuard Community</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="report.html">Report Incident</a></li>
+                    <li><a href="alerts.html">Community Alerts</a></li>
+                    <li><a href="map.html">Map</a></li>
+                    <li><a href="tips.html">Safety Tips</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="report-form">
+            <div class="container">
+                <h2>Report an Incident</h2>
+                <form id="incident-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="incident-type">Incident Type</label>
+                        <select id="incident-type" name="incident-type" required>
+                            <option value="">Select Type</option>
+                            <option value="suspicious-activity">Suspicious Activity</option>
+                            <option value="theft">Theft</option>
+                            <option value="break-in">Break-in</option>
+                            <option value="vandalism">Vandalism</option>
+                            <option value="missing-person">Missing Person</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Upload Image (optional)</label>
+                        <input type="file" id="image" name="image" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="datetime">Date and Time</label>
+                        <input type="datetime-local" id="datetime" name="datetime" required>
+                    </div>
+                    <button type="submit" class="btn primary">Submit Report</button>
+                </form>
+                <div id="confirmation" class="confirmation hidden">
+                    <p>Your report has been successfully submitted to the community.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SafeGuard Community. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/reports.js"></script>
+</body>
+</html>
